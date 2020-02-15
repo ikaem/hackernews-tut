@@ -7,7 +7,7 @@ export const Story = ({storyId}) => {
     const [story, setStory] = useState({});
 
     useEffect(() => {
-        getStory(storyId).then(data => data.url && setStory(data));
+        getStory(storyId).then(data => setStory(data));
     }, [storyId]);
     
     return story && story.time? (
